@@ -1,16 +1,11 @@
-version: "3.3"
 services:
  web:
-   build: .
-   context: .
-   working_dir: /ac02docker-compose
    command: python produto.py
    links:
     - teste
    volumes:
     - .:/data
-    - ./templates:/ac02docker-compose/templates
-   ports:
+    ports:
     - "5008:5008"
 
  db:
